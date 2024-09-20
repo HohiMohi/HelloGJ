@@ -8,6 +8,11 @@ public class PauseController : MonoBehaviour
     public UnityEvent GamePaused;
     public UnityEvent GameResumed;
     private bool _isPaused;
+    [SerializeField]
+    private bool _isPauseAvailable = true;
+    public float pauseTime = 3f;
+    public float pauseCooldown = 5f;
+    [SerializeField] private float cooldownTimer = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,18 +24,38 @@ public class PauseController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.H))
         {
-            _isPaused = !_isPaused;
-            if (_isPaused)
+            if (_isPaused == false && _isPauseAvailable == true)
             {
-            Time.timeScale = 0;
-            GamePaused.Invoke();
-            }
-            else
-            {
-            Time.timeScale = 1;
-            GameResumed.Invoke();
+                _isPaused = true;
+                StartCoroutine(PauseGame());
             }
         }
+        
+            CheckCooldown();
+    }
+    
+    public IEnumerator PauseGame()
+    {
+        _isPauseAvailable = false;
+        cooldownTimer = pauseCooldown;
+        Time.timeScale = 0;
+        GamePaused.Invoke();
+        yield return new WaitForSecondsRealtime(pauseTime);
+        Time.timeScale = 1;
+        GameResumed.Invoke();
+        _isPaused = false;
+    }
 
+    public void CheckCooldown()
+    {
+        if (cooldownTimer > 0)
+        {
+            cooldownTimer -= Time.deltaTime;
+        }
+        else
+        {
+            cooldownTimer = 0;
+            _isPauseAvailable = true;
+        }
     }
 }
