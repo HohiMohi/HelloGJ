@@ -807,7 +807,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42455734}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
   m_Name: 
@@ -7479,8 +7479,8 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 9eed71cc73baf304cbd3c9b3a752b8ba, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -8225,7 +8225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8418b5c3d288983479f1c204534b1c06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHealth: {fileID: 0}
+  PlayerHealth: {fileID: 1608373686}
   damage: 1
 --- !u!65 &572811420
 BoxCollider:
@@ -8935,7 +8935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8418b5c3d288983479f1c204534b1c06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHealth: {fileID: 0}
+  PlayerHealth: {fileID: 1608373686}
   damage: 1
 --- !u!1001 &646312995
 PrefabInstance:
@@ -18707,7 +18707,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ede03377109f37f40adb7a74b6095a0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveOffset: 1
   anim: {fileID: 0}
 --- !u!65 &1288055647
 BoxCollider:
@@ -19894,7 +19893,7 @@ GameObject:
   - component: {fileID: 1368175067}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19936,7 +19935,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -22151,7 +22150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8418b5c3d288983479f1c204534b1c06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHealth: {fileID: 0}
+  PlayerHealth: {fileID: 1608373686}
   damage: 1
 --- !u!65 &1542104640
 BoxCollider:
@@ -22794,7 +22793,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ede03377109f37f40adb7a74b6095a0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveOffset: 1
   anim: {fileID: 542935048}
 --- !u!4 &1608373685
 Transform:
@@ -23271,7 +23269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8418b5c3d288983479f1c204534b1c06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHealth: {fileID: 0}
+  PlayerHealth: {fileID: 1608373686}
   damage: 1
 --- !u!65 &1630279109
 BoxCollider:
@@ -23321,7 +23319,7 @@ GameObject:
   - component: {fileID: 1630525647}
   m_Layer: 0
   m_Name: Rocks
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27197,7 +27195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 03ba10908f0aac045917f9328dc8952b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.73
+      value: 21.17
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 03ba10908f0aac045917f9328dc8952b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -29608,7 +29606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8418b5c3d288983479f1c204534b1c06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHealth: {fileID: 0}
+  PlayerHealth: {fileID: 1608373686}
   damage: 1
 --- !u!65 &2090587135
 BoxCollider:
